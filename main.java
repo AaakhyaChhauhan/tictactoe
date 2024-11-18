@@ -26,10 +26,7 @@ class Main {
         if (gameOver) {
           System.out.println("Player " + player + " has won: ");
         } else {
-          // if (player == 'X') {
-          // player = 'O';
-          // } else {
-          // player = 'X'; // }
+       
           player = (player == 'X') ? 'O' : 'X';
         }
       } else {
@@ -40,14 +37,14 @@ class Main {
   }
 
   public static boolean haveWon(char[][] board, char player) {
-    // check the rows
+   
     for (int row = 0; row < board.length; row++) {
       if (board[row][0] == player && board[row][1] == player && board[row][2] == player) {
         return true;
       }
     }
 
-    // check for col
+ 
     for (int col = 0; col < board[0].length; col++) {
         if (board[0][col] == player && board[1][col] == player && board[2][col] == player) {
             return true;
